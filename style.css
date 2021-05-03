@@ -28,20 +28,18 @@ main p {
   margin-top: 0;
 }
 
-.group-box {
-  display: flex;
-  flex-direction: row;
-  padding: 30px;
-}
-
-.group-box img {
+img {
   width: 100%;
 }
 
-.inner-group {
+.group-box {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  margin: 10px 10px 100px 10px;
+}
+
+.group-box:last-child {
+  margin-bottom: 10px;
 }
 
 .item {
@@ -52,6 +50,16 @@ main p {
   flex: 2;
 }
 
-.colored-bg {
-  background-color: #8b4513;
+@media all and (min-width: 800px) {
+  .group-box {
+    flex-direction: row;
+  }
+  .item {
+    margin: 0 10px;
+  }
+
+  .change-bg {
+    background-color: rgb(160, 82, 45);
+    padding: 20px;
+  }
 }
